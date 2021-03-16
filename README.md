@@ -1,6 +1,6 @@
 # tasks
 
-A new Flutter project.
+A Mobile application that keep track of daily tasks and goals
 
 ## Getting Started
 
