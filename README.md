@@ -1,6 +1,6 @@
 # tasks
 
-A Mobile application that keep track of daily tasks and goals
+A Mobile application that keeps track of daily tasks and goals
 
 ## Getting Started
 
