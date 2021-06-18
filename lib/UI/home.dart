@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tasks/Data/task.dart';
+
 import 'package:tasks/UI/tasks/Tasks_ui.dart';
 import 'package:tasks/UI/goals_ui.dart';
 import 'package:tasks/UI/profile_ui.dart';
@@ -14,6 +14,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   TextEditingController nameController = TextEditingController();
+
   creatInputDialoge(BuildContext context) {
     return showDialog(
         context: context,
@@ -29,11 +30,11 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Row(
                   children: [
-                    FlatButton(
+                    TextButton(
                       onPressed: () {},
                       child: Text("close"),
                     ),
-                    FlatButton(
+                    TextButton(
                       onPressed: () {},
                       child: Text("Add"),
                     )
@@ -94,22 +95,23 @@ class _HomePageState extends State<HomePage> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.format_list_bulleted),
-            title: Text("Tasks"),
+            label: "Tasks",
             backgroundColor: Colors.blue,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.check_circle_outline),
-            title: Text("Goals"),
+            label: "Goals",
+            
             backgroundColor: Colors.blue,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            title: Text("Profile"),
+            label: "Profile",
             backgroundColor: Colors.blue,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
-            title: Text("Settings"),
+            label: "Settings",
             backgroundColor: Colors.blue,
           ),
         ],
