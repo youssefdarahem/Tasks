@@ -6,10 +6,13 @@ import 'package:tasks/Database/tasks_database.dart';
 
 class TaskNotifier extends ChangeNotifier {
   List<Task> _taskList = [];
+  int listLength = 0;
   UnmodifiableListView<Task> get taskList => UnmodifiableListView(_taskList);
 
-  addTask(Task task) {
-    _taskList.add(task);
+  addTask(Task task) async {
+    Task taskFromDB = await TasksDatabase.instance.create(task);
+    _taskList.add(taskFromDB);
+    listLength++;
     notifyListeners();
   }
 
@@ -18,9 +21,10 @@ class TaskNotifier extends ChangeNotifier {
     notifyListeners();
   }
 
-  addAll() async{
+  addAll() async {
     List<Task> _tasksFromDatabase = await TasksDatabase.instance.readAllTasks();
     _taskList.addAll(_tasksFromDatabase);
+    listLength = _taskList.length;
     notifyListeners();
   }
 }

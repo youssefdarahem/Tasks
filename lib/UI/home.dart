@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'package:tasks/UI/tasks/Tasks_ui.dart';
+import 'package:tasks/UI/tasks/Tasks_page.dart';
 import 'package:tasks/UI/goals_ui.dart';
 import 'package:tasks/UI/profile_ui.dart';
 import 'package:tasks/UI/settings_ui.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({Key key}) : super(key: key);
@@ -13,42 +14,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  TextEditingController nameController = TextEditingController();
-
-  creatInputDialoge(BuildContext context) {
-    return showDialog(
-        context: context,
-        builder: (context) {
-          return Dialog(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Column(
-              children: [
-                TextField(
-                  controller: nameController,
-                ),
-                Row(
-                  children: [
-                    TextButton(
-                      onPressed: () {},
-                      child: Text("close"),
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text("Add"),
-                    )
-                  ],
-                )
-              ],
-            ),
-          );
-        });
-  }
-
+  
   int _currentIndex = 0;
   List<Widget> _mainPages = [
-    Tasks(),
+    TasksPage(),
     Goals(),
     Profile(),
     Settings(),

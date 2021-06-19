@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tasks/Bloc/taskNotifier.dart';
+
 import 'package:tasks/ui/home.dart';
 
 void main() {
@@ -9,7 +10,8 @@ void main() {
       providers: [
         ChangeNotifierProvider(
           create: (_) => TaskNotifier(),
-        )
+        ),
+        
       ],
       child: MyApp(),
     ),

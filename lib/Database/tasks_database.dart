@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:tasks/Data/task.dart';
@@ -31,9 +31,8 @@ class TasksDatabase {
     CREATE TABLE $tableTasks (
       ${TasksFields.id} $idType,
       ${TasksFields.name} TEXT,
-      ${TasksFields.value} TEXT,
-    )
-     ''');
+      ${TasksFields.value} TEXT
+    )''');
   }
 
   Future<Task> create(Task task) async {
