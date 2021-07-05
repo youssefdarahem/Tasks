@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tasks/Bloc/taskNotifier.dart';
+import 'package:tasks/UI/add_tasks_goals/add_page.dart';
 
-import 'package:tasks/ui/home.dart';
+
+
+import 'UI/home/home_page.dart';
 
 void main() {
   runApp(
@@ -28,7 +31,12 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       //home: MyHomePage(title: 'Flutter Demo Home Page'),
-      home: HomePage(),
+      //home: HomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomePage(),
+        '/add_task_page': (context) => AddPage(),
+      },
     );
   }
 }
