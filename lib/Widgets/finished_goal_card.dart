@@ -35,9 +35,11 @@ class FinishedGoalCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Center(
-                child: Text(
-                  title,
-                  style: Theme.of(context).textTheme.headline1,
+                child: FittedBox(
+                  child: Text(
+                    title,
+                    style: Theme.of(context).textTheme.headline1,
+                  ),
                 ),
               ),
               Spacer(),
@@ -48,9 +50,11 @@ class FinishedGoalCard extends StatelessWidget {
                     color: Theme.of(context).primaryColor,
                   ),
                   SizedBox(width: 5),
-                  Text(
-                    'Tasks : $numOfFinishedTasks',
-                    style: TextStyle(color: Colors.black54),
+                  FittedBox(
+                    child: Text(
+                      'Tasks : $numOfFinishedTasks',
+                      style: TextStyle(color: Colors.black54),
+                    ),
                   ),
                 ],
               ),
