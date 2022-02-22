@@ -3,7 +3,7 @@
 A Mobile application that keeps track of daily tasks and goals
 
 # Avaliable on Google Play Store
-![View on Goolge Play](https://play.google.com/store/apps/details?id=com.youssefdarahem.Goals)
+[View on Goolge Play](https://play.google.com/store/apps/details?id=com.youssefdarahem.Goals)
 
 ## Getting Started
 
